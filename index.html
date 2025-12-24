@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giáng Sinh Kỳ Diệu ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(circle at top, #001f3f, #000814);
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* ===== STAR BACKGROUND ===== */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%,100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* ===== MAIN CARD ===== */
+.card {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 30, 60, 0.45);
+    backdrop-filter: blur(12px);
+    border-radius: 26px;
+    padding: 50px 45px;
+    text-align: center;
+    border: 2px solid rgba(0, 234, 255, 0.5);
+    box-shadow:
+        0 0 40px rgba(0, 234, 255, 0.4),
+        inset 0 0 30px rgba(255,255,255,0.05);
+}
+
+/* ===== TITLE ===== */
+h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 34px;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+    color: #00eaff;
+    text-shadow:
+        0 0 20px rgba(0,234,255,0.9),
+        0 0 40px rgba(0,234,255,0.5);
+}
+
+/* ===== BUTTONS ===== */
+.link-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.magic-btn {
+    text-decoration: none;
+    padding: 16px 42px;
+    border-radius: 45px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.6px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.6);
+    transition: all 0.35s ease;
+}
+
+/* sweep light */
+.magic-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.8),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: 0.7s;
+}
+
+.magic-btn:hover::before {
+    left: 120%;
+}
+
+.magic-btn:hover {
+    transform: translateY(-5px) scale(1.06);
+}
+
+/* BUTTON COLORS */
+.btn-1 {
+    background: linear-gradient(135deg, #0066ff, #00eaff);
+    box-shadow: 0 0 30px rgba(0,234,255,0.7);
+}
+
+.btn-2 {
+    background: linear-gradient(135deg, #ff4d88, #ff9acb);
+    box-shadow: 0 0 30px rgba(255,105,180,0.7);
+}
+
+.btn-3 {
+    background: linear-gradient(135deg, #00c853, #69f0ae);
+    box-shadow: 0 0 30px rgba(105,240,174,0.7);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+    .card {
+        padding: 40px 25px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    .magic-btn {
+        font-size: 14px;
+        padding: 14px 30px;
+    }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 30px;
+    font-size: 12px;
+    opacity: 0.4;
+}
+</style>
+</head>
+
+<body>
+
+<!-- STARS -->
+<script>
+for (let i = 0; i < 80; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.animationDelay = Math.random() * 3 + "s";
+    document.body.appendChild(star);
+}
+</script>
+
+<!-- CARD -->
+<div class="card">
+    <h1>✨ GIÁNG SINH ✨</h1>
+
+    <div class="link-buttons">
+        <a href="index1.html" target="_blank" class="magic-btn btn-1">
+            🎄 Phiên bản 1
+        </a>
+        <a href="index ver1.1.html" target="_blank" class="magic-btn btn-2">
+            💖 Phiên bản 2
+        </a>
+        <a href="index ver1.0.html" target="_blank" class="magic-btn btn-3">
+            📸 Phiên bản 3
+        </a>
+    </div>
+
+    <div class="footer">© by chengtang</div>
+</div>
+
+</body>
+</html>
